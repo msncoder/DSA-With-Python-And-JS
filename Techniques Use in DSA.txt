@@ -1,0 +1,15 @@
+1. Brute Force ==> Sab kuch check karo, har combination try karo.
+2. Two Pointer Technique
+3. Sliding Window
+4. Binary Search
+5. Recursion
+6. Backtracking
+7. Greedy Algorithm
+8. Dynamic Programming (DP)
+9. Divide and Conquer
+10. Depth First Search (DFS) & Breadth First Search (BFS)
+11. Union Find / Disjoint Set Union (DSU)
+12. Topological Sort
+13. Bit Manipulation
+14. Trie (Prefix Tree)
+15. Heap / Priority Queue
