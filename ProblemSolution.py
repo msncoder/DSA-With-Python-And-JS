@@ -98,3 +98,36 @@
 #         print(i)
         
 
+# Easy Problems
+
+# Sum of Digits
+
+# Explanation: The sum of its digits are: 6 + 8 + 7 = 21
+
+# sum = 0
+# inp = int(input("Enter a three digits"))
+
+# a = inp%10
+
+# b = inp//10
+
+# c = b % 10
+
+# d = b // 10
+
+# print(a)
+# print(b)
+# print(c)
+# print(d)
+# print(a+c+d)
+
+# Write a program to reverse digits of a number
+inp = int(input("Enter a tree digit"))
+rev = 0
+
+while(inp > 0):
+    a = inp % 10
+    rev = rev * 10 + a
+    inp = inp // 10
+
+print(rev)

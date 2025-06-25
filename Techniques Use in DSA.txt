@@ -1,4 +1,5 @@
-1. Brute Force ==> Sab kuch check karo, har combination try karo.
+1. Brute Force ==> Sab kuch check karo, har combination try karo. example app k pass 10 chabiyan hain ek tala aur wo 2 same chabiyon sy khota hy. so try very key combination.
+
 2. Two Pointer Technique
 3. Sliding Window
 4. Binary Search
