@@ -6,7 +6,7 @@ import ctypes
 class MeraList():
     def __init__(self):
         self.size = 1
-        self.n = 0
+        self.n = 0S
 
         self.A = self.__make_array(self.size)
 
