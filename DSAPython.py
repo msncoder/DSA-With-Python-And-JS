@@ -32,6 +32,23 @@ class MeraList():
         self.A[self.n] = item
         self.n = self.n+1
 
+    def pop(self):
+        if self.n == 0:
+            return 'Empty List'
+        print(self.A[self.n-1])
+        self.n = self.n - 1
+
+    def clear(self):
+        self.n = 0
+        self.size = 1
+
+    def find(self,item):
+        for i in range(self.n):
+            if self.A[i] == item:
+                return i
+            
+        return 'Value Error - not in list'
+
     def __resize(self,new_capcity):
         #create a new array with new capacity
         B = self.__make_array(new_capcity)
@@ -54,8 +71,10 @@ L.append(True)
 
 print(len(L))
 print(L)
-
-
-
-
-# print(type(L))
+L.pop()
+L.pop()
+L.find(20)
+L.find("hhel")
+L.clear()
+print(type(L))
+print(L)
