@@ -48,6 +48,37 @@ class MeraList():
                 return i
             
         return 'Value Error - not in list'
+    
+    def insert(self,pos,item):
+        if 0 <= pos < self.n:
+            if self.n == self.size:
+                self .__resize(self.size*2)
+
+            for i in range(self.n,pos,-1):
+                self.A[i] = self.A[i-1]
+
+            self.A[pos] = item
+            self.n = self.n + 1
+        else:
+            return 'Index Error'
+        
+
+    def __delitem__(self,pos):
+        if 0 <= pos < self.n:
+            for i in range(pos,self.n-1):
+                self.A[i] = self.A[i+1]
+
+            self.n = self.n - 1
+        else:
+            return 'Index Error'
+        
+    def remove(self,item):
+        pos = self.find(item)
+        if type(pos) == int:
+            self.__delitem__(pos)
+        else:
+            return pos
+
 
     def __resize(self,new_capcity):
         #create a new array with new capacity
@@ -71,10 +102,18 @@ L.append(True)
 
 print(len(L))
 print(L)
-L.pop()
-L.pop()
+
 L.find(20)
 L.find("hhel")
 L.clear()
+
+
 print(type(L))
+print(L)
+
+L.__delitem__(0)
+print(L)
+L.remove(1)
+print(L)
+L.insert(2,20)
 print(L)
