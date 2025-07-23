@@ -1,5 +1,4 @@
 class Node:
-
     def __init__(self, value):
         self.data = value
         self.next = None
@@ -52,7 +51,7 @@ class LinkedList:
             self.head = new_node
             self.n = self.n + 1
 
-        else:
+        else: 
             curr = self.head
 
             while curr.next != None:
@@ -82,13 +81,13 @@ class LinkedList:
 L = LinkedList()
 # print(len(L))
 
-# L.insert_head(1)
-# L.insert_head(2)
-# L.insert_head(3)
-# L.insert_head(3)
-L.append(8)
-L.append(8)
-L.insert_after(0,9)
+L.insert_head(1)
+L.insert_head(2)
+L.insert_head(3)
+L.insert_head(3)
+# L.append(8)
+# L.append(8)
+L.insert_after(1,90)
 # print(len(L))
 print(L)
 
