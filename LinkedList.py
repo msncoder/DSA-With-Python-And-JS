@@ -106,6 +106,26 @@ class LinkedList:
 
         self.n = self.n - 1
 
+    
+    def remove(self,value):
+
+        if self.head == None:
+            return 'Empty LinkedList'
+
+        if self.head.data == value:
+            return self.delete_head()
+
+        curr = self.head
+
+        while curr.next != None:
+            if curr.next.data == value:
+                break
+            curr = curr.next
+
+        if curr.next == None:
+            return 'Not Found'
+        else:
+            curr.next = curr.next.next
 
 L = LinkedList()
 # print(len(L))
@@ -116,7 +136,12 @@ L.insert_head(3)
 L.insert_head(3)
 # L.append(8)
 # L.append(8)
-L.insert_after(1,90)
+# L.insert_after(1,90)
 # print(len(L))
+
+
+# L.remove(90)
+# L.remove(90)
 print(L)
+
 
