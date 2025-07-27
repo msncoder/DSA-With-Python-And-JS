@@ -126,6 +126,31 @@ class LinkedList:
             return 'Not Found'
         else:
             curr.next = curr.next.next
+            self.n = self.n - 1
+
+    def search(self,item):
+        curr = self.head
+        pos = 0
+
+        while curr != None:
+            if curr.data == item:
+                return pos
+            curr = curr.next
+            pos = pos + 1
+        return 'Not Found'
+
+
+    def __getitem__(self,index):
+        curr = self.head
+        pos = 0 
+
+        while curr != None:
+            if pos == index:
+                return curr.data
+            curr = curr.next
+            pos = pos + 1
+
+        return 'IndexError'
 
 L = LinkedList()
 # print(len(L))
@@ -143,5 +168,10 @@ L.insert_head(3)
 # L.remove(90)
 # L.remove(90)
 print(L)
+# print(L.search(2))
 
 
+print(L[0])  # Calls __getitem__ with index 0
+print(L[2])  # Calls __getitem__ with index 2
+L.remove(2)
+print(L)
